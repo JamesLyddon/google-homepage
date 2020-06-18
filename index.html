@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body{
+        position: absolute;
+    }
+    #logo{
+        padding-top: 80px;
+        margin: 30px;
+        grid-area: center;
+        height: 92px;
+        width: 272px;
+    }
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;        
+    }
+    .grey{
+        background-color: #888;
+    }
+    .gridlogo{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+            "left left center right right";
+    }
+    .gridsearch{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+            "a1 b1 c1 a c c c c f a2 b2 c2"
+            "g1 h1 i1 g h i j k l j1 k1 l1";
+        align-items: center;
+    }
+    .searchbar{
+        grid-area: c;
+        border: none;
+        box-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+        appearance: none;
+    }
+
+    .searchbar:hover{
+        box-shadow: -2px 0 #ddd, 0 2px #ddd, 2px 0 #ddd, 0 -2px #ddd;
+    }
+
+    .butstyle{
+        border: none;
+        color: #666;
+        min-height: 40px;
+        border-radius: 5px;
+        min-width: 120px;
+        
+    }
+
+    #searchstyle{
+        border-radius: 200px;
+    }
+
+    .googlebut{
+        grid-area: i;
+        justify-self: center;
+    }
+    .feelluck{
+        grid-area: j;
+        justify-self: center;
+    }
+    header{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #666;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-areas: 
+            "a b c c c c c c c c c c c c c c c c c c d e f g";
+    }
+    .gmail{
+        grid-area: d;
+    }
+    .images{
+        grid-area: e;
+    }
+    .grid{
+        grid-area: f;
+        max-width: 40px;
+    }
+    .profile{
+        grid-area: g;
+        max-width: 40px;
+    }
+    footer{
+        font-family: Arial, Helvetica, sans-serif;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #eee;
+        color: #777;
+        text-align: center;
+    }
+    .UK{
+        font-size: 14px;
+
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .options{
+        font-size: 14px;
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 
+            "a b c c e f g h i j k l";
+    }
+    hr{
+        display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0; 
+    }
+    p{
+        padding: 4px;
+        margin: 4px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <p>About</p>
+    <p>Store</p>
+    <p class="gmail" >Gmail</p>
+    <p class="images" >Images</p>
+    <img class="grid"  src="grid.png" alt="grid">
+    <img class="profile" src="profile.png" alt="profile pic">
+</header>
+
+<main>
+    <div class="gridlogo">
+        <img id="logo" src="googlelogo.png" alt="google's logo">
+    </div>
+    <div>
+        <div class="gridsearch">
+            <input class="searchbar butstyle" id="searchstyle" type="text" name="search">
+        </div>
+
+    </div>
+    <div class="gridsearch">
+        <button class="googlebut butstyle">Google Search</button>
+        <button class="feelluck butstyle">I'm Feeling Lucky</button>
+    </div>
+</main>
+
+<footer>
+    <div class="UK">
+        <p style="padding: 5px; margin: 5px;">United Kingdom</p>
+        
+    </div>
+    <hr style="padding: 5px; margin: 5px;">
+    <div class="options" style="padding: 5px; margin: 5px;">
+        
+        <p >Advertising</p>
+        <p>Business</p>
+        <p style="grid-area: c; text-align: start;" >How Search Works</p>
+        <p style="grid-area: j">Privacy</p>
+        <p style="grid-area: k">Terms</p>
+        <p style="grid-area: l" >Settings</p>
+    </div>
+</footer>
+
+</body>
+</html>
